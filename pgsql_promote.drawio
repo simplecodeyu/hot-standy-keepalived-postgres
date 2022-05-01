@@ -1,1 +1,73 @@
-<mxfile host="app.diagrams.net" modified="2022-05-01T09:31:42.782Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36" version="17.5.0" etag="1lr4FgKeiJwgCdbWBgPE" type="github"><diagram id="ov-N7yDpS3_3Fq1HHecg">UzV2zq1wL0osyPDNT0nNUTV2VTV2LsrPL4GwciucU3NyVI0MMlNUjV1UjYwMgFjVyA2HrCFY1qAgsSg1rwSLBiADYTaQg2Y1AA==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2022-05-01T09:48:35.631Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36" etag="qBCgIS3URnuzoPzGQBH6" version="17.5.0" type="github">
+  <diagram id="ov-N7yDpS3_3Fq1HHecg" name="Page-1">
+    <mxGraphModel dx="351" dy="387" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="aAtHFXW3ORHCPswFaJat-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="aAtHFXW3ORHCPswFaJat-1" target="aAtHFXW3ORHCPswFaJat-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aAtHFXW3ORHCPswFaJat-1" value="pgsql_promote" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="414" y="180" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="aAtHFXW3ORHCPswFaJat-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="aAtHFXW3ORHCPswFaJat-2" target="aAtHFXW3ORHCPswFaJat-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aAtHFXW3ORHCPswFaJat-2" value="删除当前节点的时间线文件&lt;br&gt;rm -f ${XLOG_NOTE_FILE}.*" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="386" y="270" width="176" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="aAtHFXW3ORHCPswFaJat-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="aAtHFXW3ORHCPswFaJat-4" target="aAtHFXW3ORHCPswFaJat-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aAtHFXW3ORHCPswFaJat-4" value="遍历所有节点，除了自己以外的其他节点全部赋予&lt;br&gt;postgresql()-data-status:disconnect&lt;br&gt;master-postgresql():-INF" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="334" y="360" width="280" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="aAtHFXW3ORHCPswFaJat-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="aAtHFXW3ORHCPswFaJat-6" target="aAtHFXW3ORHCPswFaJat-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aAtHFXW3ORHCPswFaJat-6" value="touch $PGSQL_LOCK" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="354" y="450" width="240" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="aAtHFXW3ORHCPswFaJat-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="aAtHFXW3ORHCPswFaJat-10" target="aAtHFXW3ORHCPswFaJat-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aAtHFXW3ORHCPswFaJat-10" value="show_master_baseline给自己的节点副本写上时间线" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="354" y="550" width="240" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="aAtHFXW3ORHCPswFaJat-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="aAtHFXW3ORHCPswFaJat-12" target="aAtHFXW3ORHCPswFaJat-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aAtHFXW3ORHCPswFaJat-12" value="提升当前的数据库" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="354" y="630" width="240" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="aAtHFXW3ORHCPswFaJat-17" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="aAtHFXW3ORHCPswFaJat-14" target="aAtHFXW3ORHCPswFaJat-16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aAtHFXW3ORHCPswFaJat-14" value="停止当前节点上的备机数据库" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="354" y="730" width="240" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="aAtHFXW3ORHCPswFaJat-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="aAtHFXW3ORHCPswFaJat-16" target="aAtHFXW3ORHCPswFaJat-18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aAtHFXW3ORHCPswFaJat-16" value="对当前数据库进行提升操作" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="354" y="820" width="240" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="aAtHFXW3ORHCPswFaJat-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="aAtHFXW3ORHCPswFaJat-18" target="aAtHFXW3ORHCPswFaJat-20">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aAtHFXW3ORHCPswFaJat-18" value="pgsql_real_monitor&lt;br&gt;查询数据库的状态" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="354" y="910" width="240" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="aAtHFXW3ORHCPswFaJat-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="aAtHFXW3ORHCPswFaJat-20" target="aAtHFXW3ORHCPswFaJat-22">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="aAtHFXW3ORHCPswFaJat-20" value="postgresql()-data_status:LASTEST&lt;br&gt;$CRM_MASTER -v $PROMOTE_ME&lt;br&gt;postgresql_pgsql_status:PRI" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="354" y="990" width="240" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="aAtHFXW3ORHCPswFaJat-22" value="返回成功" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="354" y="1070" width="240" height="50" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
